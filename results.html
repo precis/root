@@ -277,6 +277,110 @@ style="border: 1px solid black">PUT_CountContract</td>
 (New_s1Count >= 2))</td>
 	</tr>
 </table>
+	  
+<h4>UndirectedGraph</h4>
+	  
+<table style="border: 1px solid black">
+	<tr>
+		<th style="border: 1px solid black">Method</th>
+		<th colspan="2" 
+style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_AddVertexContract</td>
+		<td style="border: 1px solid black">(!(New_Ret)) && Old_ugContainsVertexX && New_ugVertexCount == Old_ugVertexCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && Old_ugAdjacentDegree >= 0 && Old_ugAdjacentDegree <= 1 && Old_ugVertexCount >= 1))
+		</td>
+		<td style="border: 1px solid black">(New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty)) && New_ugContainsVertexX) && (((!(Old_ugContainsVertexX)) 
+&& (!(Old_ugEdgeCount == New_ugVertexCount)) && New_ugIsAdjacentEdgesEmpty && New_Ret && New_ugVertexCount == 1 + Old_ugVertexCount && Old_ugEdgeCount >= 0 && Old_ugEdgeCount <= 1 && New_ugAdjacentDegree == 0 && 
+Old_ugVertexCount <= 1 && New_ugVertexCount >= 1) || (Old_ugAdjacentDegree <= Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_RemoveVertexContract</td>
+		<td style="border: 1px solid black">((!(New_ugContainsVertexX)) && (!(Old_ugIsVerticesEmpty)) && New_ugVertexCount == -1 + Old_ugVertexCount && New_Ret && Old_ugContainsVertexX && New_ugVertexCount >= 0 && New_ugEdgeCount 
+>= 0 && Old_ugAdjacentDegree >= 0)</td>
+		<td style="border: 1px solid black">((Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugEdgeCount ==       Old_ugEdgeCount + -1*Old_ugAdjacentDegree && (!(New_ugIsAdjacentEdgesEmpty))) || (New_ugEdgeCount == -1*Old_ugAdjacentDegree && Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugEdgeCount == 0))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_ClearAdjacentEdgesContract</td>
+		<td style="border: 1px solid black">(Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugVertexCount == Old_ugVertexCount && (!(0 == Old_ugVertexCount)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_ugIsAdjacentEdgesEmpty && Old_ugContainsVertexX && New_ugContainsVertexX && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0 && New_ugAdjacentDegree == 0)
+		</td>
+		<td style="border: 1px solid black">((New_ugEdgeCount ==       Old_ugEdgeCount + -1*Old_ugAdjacentDegree && (!(Old_ugIsEdgesEmpty)) && Old_ugEdgeCount >= 1) || (New_ugEdgeCount == -1*Old_ugAdjacentDegree && Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugEdgeCount == 0))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_ContainsEdgeContract</td>
+		<td style="border: 1px solid black">(!(1 == Old_target)) && Old_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget >= 0))
+		</td>
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugVertexCount >= 1) && (((!(New_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmptySource && (!(New_Ret)) && Old_ugIsAdjacentEdgesEmptySource && (!(Old_ContainsEdgeSrcTar)) && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugAdjacentDegreeSource == 0 && New_ugAdjacentDegreeSource == 0) || (Old_ugAdjacentDegreeSource <= Old_ugVertexCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegreeSource ==       Old_ugAdjacentDegreeSource && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && (!(Old_target == Old_ugVertexCount)) && New_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeTarget && (!(-1 == Old_source)) && (!(Old_source == Old_ugVertexCount)) && (!(1 == Old_source)) && (!(Old_target == Old_ugEdgeCount)) && (!(0 == Old_ugEdgeCount)) && (!(Old_source == Old_ugEdgeCount)) && (!(-1 == Old_target))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_AdjacentEdgeContract</td>
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_index == 0) && ((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(New_Ret_Source == Old_ugVertexCount)) && (!(New_Ret_Source == Old_ugAdjacentDegree))
+		</td>
+		<td style="border: 1px solid black">(!(1 == New_Ret_Source)) && New_Ret_Target == 0 && Old_x == 0 && New_Ret_Source >= 0 && Old_ugAdjacentDegree >= 2) || (New_Ret_Target == Old_x && Old_ugEdgeCount <= Old_ugVertexCount && Old_ugEdgeCount >= 1 && New_ugAdjacentDegree == 1 && Old_ugAdjacentDegree == 1))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_ContainsEdgeIntContract</td>
+		<td style="border: 1px solid black">(!(New_ContainsEdgeSrcTar)) && Old_ugIsAdjacentEdgesEmptySource && (!(New_Ret)) && New_ugIsAdjacentEdgesEmptySource && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_ugAdjacentDegreeSource == 0 && Old_ugAdjacentDegreeSource == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0))</td>
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugVertexCount >= 1) && ((Old_ugAdjacentDegreeSource <= Old_ugVertexCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegreeSource ==       Old_ugAdjacentDegreeSource && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugAdjacentDegreeSource >= 0 && Old_ugEdgeCount >= 1) || ((!(Old_ContainsEdgeSrcTar))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_IsVerticesEmptyContract</td>
+		<td style="border: 1px solid black">(!(New_Ret)) && Old_ugEdgeCount >= 1 && Old_ugVertexCount >= 1))</td>
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount) && ((New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_ugEdgeCount == 0 && Old_ugVertexCount >= 0 && Old_ugEdgeCount == 0) || (New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_VertexCountContract</td>
+		<td style="border: 1px solid black">((New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty))</td>
+		<td style="border: 1px solid black">(!(Old_ugIsVerticesEmpty)) && New_Ret >= 1 && Old_ugEdgeCount >= 0) || (New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_ugEdgeCount == 0 && New_Ret == 0 && Old_ugEdgeCount == 0))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_ContainsVertexContract</td>
+		<td style="border: 1px solid black">((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty))</td>
+		<td style="border: 1px solid black">(!(Old_ugIsVerticesEmpty)) && Old_ugEdgeCount >= 0 && Old_ugVertexCount >= 1) || (New_ugIsVerticesEmpty && (!(New_Ret)) && Old_ugIsEdgesEmpty && Old_ugIsVerticesEmpty && New_ugIsEdgesEmpty && New_ugVertexCount == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugVertexCount == 0))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_AddEdgeContract</td>
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && (!(New_ugIsAdjacentEdgesEmptySource)) && (!(New_ugIsAdjacentEdgesEmptyTarget)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar)</td>
+		<td style="border: 1px solid black">((New_ugAdjacentDegreeSource <= Old_ugVertexCount && New_ugAdjacentDegreeTarget <= Old_ugVertexCount && Old_ugEdgeCount <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <= New_ugEdgeCount && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <=       New_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget <=       New_ugAdjacentDegreeTarget && (!(Old_ugIsEdgesEmpty)) && Old_ugAdjacentDegreeSource >= 0 && New_ugAdjacentDegreeSource >= 1 && Old_ugAdjacentDegreeTarget >= 0 && New_ugAdjacentDegreeTarget >= 1 && Old_ugEdgeCount >= 1) || (New_Ret && Old_ugIsEdgesEmpty && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsAdjacentEdgesEmptyTarget && Old_ugIsAdjacentEdgesEmptySource && Old_target <= Old_source && Old_ugVertexCount >= 1 && Old_ugAdjacentDegreeSource == 0 && Old_ugAdjacentDegreeTarget == 0 && New_ugAdjacentDegreeSource == 1 && New_ugAdjacentDegreeTarget == 1 && Old_ugEdgeCount == 0 && New_ugEdgeCount == 1))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_RemoveEdgeContract</td>
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget) && ((Old_ugAdjacentDegreeTarget <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <=       
+Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeSource <=       Old_ugAdjacentDegreeTarget && New_ugAdjacentDegreeSource <=       New_ugAdjacentDegreeTarget && New_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeTarget && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty))
+		</td>
+		<td style="border: 1px solid black">(!(Old_ugEdgeCount <= Old_ugAdjacentDegreeSource)) && Old_ugAdjacentDegreeTarget <= New_ugEdgeCount && (!(New_ugEdgeCount <= New_ugAdjacentDegreeSource)) && New_ugAdjacentDegreeSource >= 0 && Old_ugVertexCount >= 2) || ((!(New_ContainsEdgeSrcTar)) && Old_ugEdgeCount == Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget == Old_ugEdgeCount && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmptySource && New_ugIsAdjacentEdgesEmptyTarget && New_ugAdjacentDegreeSource == 0 && Old_ugEdgeCount >= 0 && Old_ugEdgeCount <= 1 && Old_ugVertexCount >= 1 && New_ugAdjacentDegreeTarget == 0 && New_ugEdgeCount == 0))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_IsEdgesEmptyContract</td>
+		<td style="border: 1px solid black">(!(Old_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1 && Old_ugEdgeCount >= 0))</td>
+		<td style="border: 1px solid black">((New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && New_Ret && Old_ugVertexCount == 0 && New_ugEdgeCount == 0 
+&& New_ugVertexCount == 0 && Old_ugEdgeCount == 0) || (New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_EdgeCountContract</td>
+		<td style="border: 1px solid black">(!(Old_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1 && New_Ret >= 1))</td>
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount) && ((New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && Old_ugVertexCount >= 0 && New_Ret == 0) || ((!(New_ugIsEdgesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_AdjacentDegreeContract</td>
+		<td style="border: 1px solid black">(New_Ret <= Old_ugVertexCount && New_Ret <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugVertexCount >= 1 && New_Ret >= 0)
+		</td>
+		<td style="border: 1px solid black">(((!(Old_x == Old_ugEdgeCount))) || (New_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && Old_ugIsEdgesEmpty && Old_x == 0))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_IsAdjacentEdgesEmptyContract</td>
+		<td style="border: 1px solid black">(!(Old_x == Old_ugEdgeCount)) && Old_x >= 0 && Old_ugAdjacentDegree >= 1))</td>
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX) && ((New_Ret && (!(Old_ugVertexCount <= Old_ugEdgeCount)) && Old_ugEdgeCount >= 0 && New_ugAdjacentDegree == 0 && Old_ugAdjacentDegree == 0) || (Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(Old_x == Old_ugVertexCount)) && (!(Old_x == Old_ugAdjacentDegree)) && (!(1 == Old_x)) && (!(New_Ret))
+		</td>
+	</tr>
+</table>
 </body>
  
 </html>
