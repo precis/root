@@ -129,6 +129,53 @@ black">((Old_bhMinimumKey == New_Ret_Key && New_Ret_Value == Old_bhMinimumValue 
 		</td>
 	</tr>
 </table>
+
+<h4>Dictionary</h4>
+	  
+<table style="border: 1px solid black">
+	<tr>
+		<th style="border: 1px solid black">Method</th>
+		<th colspan="2" 
+style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_AddContract</td>
+		<td style="border: 1px solid black">((!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dContainsKeyX && New_dContainsValueY)</td>
+		<td style="border: 1px solid black">(((!(Old_dContainsValueY)) && New_dCount >= 1) || (Old_dCount >= 1))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_RemoveContract</td>
+		<td style="border: 1px solid black">((!(New_dContainsKeyX)))</td>
+		<td style="border: 1px solid black">(((!(Old_dContainsKeyX)) && New_dCount == Old_dCount && (!(New_Ret)) && Old_dCount >= 0) || (New_Ret && Old_dContainsKeyX && New_dCount == -1 + Old_dCount && New_dCount >= 0))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_GetContract</td>
+		<td style="border: 1px solid black">(New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && Old_dCount >= 1)</td>
+		<td style="border: 1px solid black">(((!(New_Ret == Old_x))) || (New_ContainsKeyNewRet))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid 
+black">PUT_SetContract</td>
+		<td style="border: 1px solid black">(New_dContainsValueY && New_dContainsKeyX)</td>
+		<td style="border: 1px solid black">((Old_dContainsKeyX && New_dCount == Old_dCount && Old_dCount >= 1) || ((!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dCount >= 1))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_ContainsKeyContract</td>
+		<td style="border: 1px solid black">(New_dCount == Old_dCount)</td>
+		<td style="border: 1px solid black">(((!(New_Ret)) && Old_dCount >= 0) || (Old_dCount >= 1))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_ContainsValueContract</td>
+		<td style="border: 1px solid black">(New_dCount == Old_dCount)</td>
+		<td style="border: 1px solid black">(((!(New_Ret)) && Old_dCount 
+>= 0) || (Old_dCount >= 1))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_CountContract</td>
+		<td></td>
+		<td style="border: 1px solid black">(((New_Ret == 0 ) || (New_Ret >= 1)))</td>
+	</tr>
+</table>
 </body>
  
 </html>
