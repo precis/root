@@ -240,6 +240,43 @@ style="border: 1px solid black">Contract</th>
 		<td style="border: 1px solid black">(((New_Top == Old_Top && New_Ret >= 1) || (New_Ret == 0 )))</td>
 	</tr>
 </table>
+	  
+<h4>Stack</h4>
+	  
+<table style="border: 1px solid black">
+	<tr>
+		<th style="border: 1px solid black">Method</th>
+		<th colspan="2" 
+style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_PeekContract</td>
+		<td style="border: 1px solid black">(New_ContainsNewRet)</td>
+		<td style="border: 1px solid black">((New_s1Count == Old_s1Count && Old_s1Count >= 2) || (New_s1Count == 1 && Old_s1Count == 1))</td>
+	</tr>
+	<tr>
+		<td 
+style="border: 1px solid black">PUT_CountContract</td>
+		<td></td>
+		<td style="border: 1px solid black">(((New_Top == Old_Top && New_Ret >= 0) || (New_Ret == 0)))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_ContainsContract</td>
+		<td style="border: 1px solid black">(New_s1Count == Old_s1Count)</td>
+		<td style="border: 1px solid black">(((!(New_Ret)) && Old_s1Count >= 0) || (New_Top == Old_Top && Old_s1Count >= 1))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_PopContract</td>
+		<td style="border: 1px solid black">(New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count)</td>
+		<td style="border: 1px solid black">(((!(New_ContainsNewRet)) && New_s1Count >= 0) || (Old_s1Count >= 2))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_PushContract</td>
+		<td style="border: 1px solid black">(Old_x == New_Top && New_s1Count == 1 + Old_s1Count && New_s1ContainsX)</td>
+		<td style="border: 1px solid black">(((!(Old_s1ContainsX)) && New_s1Count >= 1) || 
+(New_s1Count >= 2))</td>
+	</tr>
+</table>
 </body>
  
 </html>
