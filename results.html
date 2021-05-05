@@ -176,6 +176,36 @@ black">PUT_SetContract</td>
 		<td style="border: 1px solid black">(((New_Ret == 0 ) || (New_Ret >= 1)))</td>
 	</tr>
 </table>
+	  
+<h4>HashSet</h4>
+	 
+<table style="border: 1px solid black">
+	<tr>
+		<th style="border: 1px solid black">Method</th>
+		<th colspan="2" 
+style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_AddContract</td>
+		<td style="border: 1px solid black">(New_hsContainsX)</td>
+		<td style="border: 1px solid black">(((!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || ((!(Old_hsContainsX)) && New_Ret && New_hsCount == 1 + Old_hsCount && New_hsCount >= 1))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_RemoveContract</td>
+		<td style="border: 1px solid black">((!(New_hsContainsX))) && ((New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && New_hsCount >= 0) || ((!(New_Ret))</td>
+		<td style="border: 1px solid black">(!(Old_hsContainsX)) && New_hsCount == Old_hsCount && Old_hsCount >= 0))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_ContainsContract</td>
+		<td style="border: 1px solid black">(New_hsCount == Old_hsCount)</td>
+		<td style="border: 1px solid black">(((!(New_Ret)) && Old_hsCount >= 0) || (Old_hsCount >= 1))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_CountContract</td>
+		<td></td>
+		<td style="border: 1px solid black">(((New_Ret == 0) || (New_Ret >= 1)))</td>
+	</tr>
+</table>
 </body>
  
 </html>
