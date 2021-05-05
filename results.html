@@ -84,6 +84,51 @@ New_arrListCount == Old_arrListCount)</td>
 		<td style="border: 1px solid black">(((New_Ret >= 1) || (New_Ret == 0)))</td>
 	</tr>
 </table>
+
+  <h4>BinaryHeap</h4>
+	  
+<table style="border: 1px solid black">
+	<tr>
+		<th style="border: 1px solid black">Method</th>
+		<th colspan="2" 
+style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_AddContract</td>
+		<td style="border: 1px solid black">((New_bhMinimumKey <= Old_key && New_bhCount == 1 + Old_bhCount && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_MinimumContract</td>
+		<td style="border: 1px solid black">((Old_bhCount == New_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value <= Old_bhMinimumValue && New_bhMinimumValue <= New_Ret_Value && New_bhMinimumKey == Old_bhMinimumKey && Old_bhMinimumValue <= New_bhMinimumValue && Old_bhCount >= 1))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_RemoveMinimumContract</td>
+		<td style="border: 1px solid 
+black">((Old_bhMinimumKey == New_Ret_Key && New_Ret_Value == Old_bhMinimumValue && New_bhCount == -1 + Old_bhCount && New_bhCount >= 0 && New_bhMinimumValue >= 0))</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_RemoveAtContract</td>
+		<td style="border: 1px solid black">((Old_index <= New_bhCount && New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey <= New_Ret_Key && Old_index >= 0 && New_bhMinimumValue >= 0))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_IndexOfContract</td>
+		<td style="border: 1px solid black">((Old_bhCount == New_bhCount && (!(New_Ret == Old_bhCount)) && New_Ret <= Old_bhCount && New_Ret >= -1))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_UpdateContract</td>
+		<td style="border: 1px solid black">((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_MinimumUpdateContract</td>
+		<td style="border: 1px solid black">((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && (!(New_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && New_bhIndexOfValue >= 0))
+		</td>
+	</tr>
+</table>
 </body>
  
 </html>
