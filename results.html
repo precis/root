@@ -20,9 +20,13 @@
 	  
 <table style="border: 1px solid black">
 	<tr>
+		<th></th>
+		<th colspan="2" style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
 		<th style="border: 1px solid black">Method</th>
-		<th colspan="2" 
-style="border: 1px solid black">Contract</th>
+		<th style="border: 1px solid black">Conjunc</th>
+		<th style="border: 1px solid black">Disjunc</th>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_AddContract</td>
@@ -36,12 +40,12 @@ style="border: 1px solid black">Contract</th>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_GetContract</td>
-		<td style="border: 1px solid black">(New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && Old_dCount >= 1)</td>
+		<td style="border: 1px solid black">(New_dCount == Old_dCount && Old_dContainsKeyX && 
+New_dContainsKeyX && New_ContainsValueNewRet && Old_dCount >= 1)</td>
 		<td style="border: 1px solid black">(((!(New_Ret == Old_x))) || (New_ContainsKeyNewRet))</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid 
-black">PUT_SetContract</td>
+		<td style="border: 1px solid black">PUT_SetContract</td>
 		<td style="border: 1px solid black">(New_dContainsValueY && New_dContainsKeyX)</td>
 		<td style="border: 1px solid black">((Old_dContainsKeyX && New_dCount == Old_dCount && Old_dCount >= 1) || ((!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dCount >= 1))</td>
 	</tr>
@@ -53,8 +57,7 @@ black">PUT_SetContract</td>
 	<tr>
 		<td style="border: 1px solid black">PUT_ContainsValueContract</td>
 		<td style="border: 1px solid black">(New_dCount == Old_dCount)</td>
-		<td style="border: 1px solid black">(((!(New_Ret)) && Old_dCount 
->= 0) || (Old_dCount >= 1))</td>
+		<td style="border: 1px solid black">(((!(New_Ret)) && Old_dCount >= 0) || (Old_dCount >= 1))</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_CountContract</td>
@@ -67,9 +70,13 @@ black">PUT_SetContract</td>
 	 
 <table style="border: 1px solid black">
 	<tr>
+		<th></th>
+		<th colspan="2" style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
 		<th style="border: 1px solid black">Method</th>
-		<th colspan="2" 
-style="border: 1px solid black">Contract</th>
+		<th style="border: 1px solid black">Conjunc</th>
+		<th style="border: 1px solid black">Disjunc</th>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_AddContract</td>
@@ -97,9 +104,13 @@ style="border: 1px solid black">Contract</th>
 	  
 <table style="border: 1px solid black">
 	<tr>
+		<th></th>
+		<th colspan="2" style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
 		<th style="border: 1px solid black">Method</th>
-		<th colspan="2" 
-style="border: 1px solid black">Contract</th>
+		<th style="border: 1px solid black">Conjunc</th>
+		<th style="border: 1px solid black">Disjunc</th>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_EnqueueContract</td>
@@ -112,7 +123,8 @@ style="border: 1px solid black">Contract</th>
 		<td style="border: 1px solid black">(((!(New_s1ContainsNewRet)) && New_s1Count >= 0) || (New_s1Count >= 1))</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid black">PUT_PeekContract</td>
+		<td style="border: 1px 
+solid black">PUT_PeekContract</td>
 		<td style="border: 1px solid black">((New_s1Count == Old_s1Count && New_s1ContainsNewRet && Old_s1Count >= 1))</td>
 	</tr>
 	<tr>
@@ -131,9 +143,13 @@ style="border: 1px solid black">Contract</th>
 	  
 <table style="border: 1px solid black">
 	<tr>
+		<th></th>
+		<th colspan="2" style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
 		<th style="border: 1px solid black">Method</th>
-		<th colspan="2" 
-style="border: 1px solid black">Contract</th>
+		<th style="border: 1px solid black">Conjunc</th>
+		<th style="border: 1px solid black">Disjunc</th>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_PeekContract</td>
@@ -141,10 +157,10 @@ style="border: 1px solid black">Contract</th>
 		<td style="border: 1px solid black">((New_s1Count == Old_s1Count && Old_s1Count >= 2) || (New_s1Count == 1 && Old_s1Count == 1))</td>
 	</tr>
 	<tr>
-		<td 
-style="border: 1px solid black">PUT_CountContract</td>
+		<td style="border: 1px solid black">PUT_CountContract</td>
 		<td></td>
-		<td style="border: 1px solid black">(((New_Top == Old_Top && New_Ret >= 0) || (New_Ret == 0)))</td>
+		<td style="border: 1px solid black">(((New_Top 
+== Old_Top && New_Ret >= 0) || (New_Ret == 0)))</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_ContainsContract</td>
@@ -159,71 +175,67 @@ style="border: 1px solid black">PUT_CountContract</td>
 	<tr>
 		<td style="border: 1px solid black">PUT_PushContract</td>
 		<td style="border: 1px solid black">(Old_x == New_Top && New_s1Count == 1 + Old_s1Count && New_s1ContainsX)</td>
-		<td style="border: 1px solid black">(((!(Old_s1ContainsX)) && New_s1Count >= 1) || 
-(New_s1Count >= 2))</td>
+		<td style="border: 1px solid black">(((!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_s1Count >= 2))</td>
 	</tr>
 </table>
 	
 <h4>ArrayList</h4>
   
-  <table style="border: 1px solid black">
+ <table style="border: 1px solid black">
+	<tr>
+		<th></th>
+		<th colspan="2" style="border: 1px solid black">Contract</th>
+	</tr>
 	<tr>
 		<th style="border: 1px solid black">Method</th>
-		<th colspan="2" style="border: 1px solid black">Contract</th>
+		<th style="border: 1px solid black">Conjunc</th>
+		<th style="border: 1px solid black">Disjunc</th>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_AddContract</td>
 		<td style="border: 1px solid black">((Old_arrListCount == New_arrListLastIndexOfX && New_arrListContainsX && New_Ret == New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
-		
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_RemoveContract</td>
-		<td style="border: 1px solid black">((New_arrListCount <= Old_arrListCount && (!(New_arrListLastIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= 
--1))
-		
+		<td style="border: 1px solid black">(New_arrListCount 
+<= Old_arrListCount && (!(New_arrListLastIndexOfX == New_arrListCount))
+		</td>
+		<td style="border: 1px solid black">(!(Old_arrListLastIndexOfX == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= -1)
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_InsertContract</td>
-		<td style="border: 1px solid black">((New_arrListContainsX && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
-		
+		<td style="border: 1px solid black">((New_arrListContainsX && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListCount 
+== 1 + Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_SetContract</td>
 		<td style="border: 1px solid black">((New_arrListContainsX && New_arrListIndexOfX <= Old_index && New_arrListCount == Old_arrListCount && Old_index <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
-		
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_GetContract</td>
-		<td style="border: 1px solid black">((Old_index < Old_arrListCount && New_containsNewRet && New_arrListCount == Old_arrListCount 
-&& Old_index >= 0))
-		
+		<td style="border: 1px solid black">((Old_index < Old_arrListCount && New_containsNewRet && New_arrListCount == Old_arrListCount && Old_index >= 0))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_ContainsContract</td>
-		<td style="border: 1px solid black">(Old_arrListIndexOfX == New_arrListIndexOfX && 
-New_arrListCount == Old_arrListCount)</td>
-		<td style="border: 1px solid black">((New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX 
-&& New_arrListIndexOfX <= New_arrListLastIndexOfX && New_Ret && New_arrListIndexOfX >= 0) || ((!(-1 == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListIndexOfX && (!(New_Ret)) && Old_arrListCount >= -1 && New_arrListIndexOfX <= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListLastIndexOfX == -1))
-		
+		<td style="border: 1px solid black">(Old_arrListIndexOfX == New_arrListIndexOfX && New_arrListCount == Old_arrListCount)</td>
+		<td style="border: 1px solid black">((New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_Ret && New_arrListIndexOfX >= 0) || ((!(-1 == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListIndexOfX && (!(New_Ret)) && Old_arrListCount >= -1 && New_arrListIndexOfX <= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListLastIndexOfX == -1))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_IndexOfContract</td>
 		<td style="border: 1px solid black">(New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(New_arrListContainsX))</td>
 		<td style="border: 1px solid black">(!(Old_arrListContainsX)) && Old_arrListCount >= -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1 && New_Ret == -1) || (New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret <= New_arrListLastIndexOfX && Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0))
-		
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_LastIndexOfContract</td>
 		<td style="border: 1px solid black">(New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(Old_arrListContainsX))</td>
 		<td style="border: 1px solid black">(!(New_arrListContainsX)) && Old_arrListCount >= -1 && New_Ret == -1 && Old_arrListIndexOfX == -1 && New_arrListIndexOfX == -1) || (New_Ret < Old_arrListCount && Old_arrListIndexOfX == New_arrListIndexOfX && Old_arrListIndexOfX <= New_Ret && New_arrListContainsX && Old_arrListContainsX && New_arrListIndexOfX >= 0))
-		
 		</td>
 	</tr>
 	<tr>
@@ -237,44 +249,65 @@ New_arrListCount == Old_arrListCount)</td>
 	  
 <table style="border: 1px solid black">
 	<tr>
+		<th></th>
+		<th colspan="2" style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
 		<th style="border: 1px solid black">Method</th>
-		<th colspan="2" 
-style="border: 1px solid black">Contract</th>
+		<th style="border: 1px solid black">Conjunc</th>
+		<th style="border: 1px solid black">Disjunc</th>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_AddContract</td>
-		<td style="border: 1px solid black">((New_bhMinimumKey <= Old_key && New_bhCount == 1 + Old_bhCount && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
+		<td style="border: 1px solid black">((Old_arrListCount == New_arrListLastIndexOfX && New_arrListContainsX && New_Ret == New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
 		</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid black">PUT_MinimumContract</td>
-		<td style="border: 1px solid black">((Old_bhCount == New_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value <= Old_bhMinimumValue && New_bhMinimumValue <= New_Ret_Value && New_bhMinimumKey == Old_bhMinimumKey && Old_bhMinimumValue <= New_bhMinimumValue && Old_bhCount >= 1))
+		<td style="border: 1px solid black">PUT_RemoveContract</td>
+		<td style="border: 1px solid black">(New_arrListCount 
+<= Old_arrListCount && (!(New_arrListLastIndexOfX == New_arrListCount))
+		</td>
+		<td style="border: 1px solid black">(!(Old_arrListLastIndexOfX == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= -1)
 		</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid black">PUT_RemoveMinimumContract</td>
-		<td style="border: 1px solid 
-black">((Old_bhMinimumKey == New_Ret_Key && New_Ret_Value == Old_bhMinimumValue && New_bhCount == -1 + Old_bhCount && New_bhCount >= 0 && New_bhMinimumValue >= 0))</td>
+		<td style="border: 1px solid black">PUT_InsertContract</td>
+		<td style="border: 1px solid black">((New_arrListContainsX && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListCount 
+== 1 + Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
+		</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid black">PUT_RemoveAtContract</td>
-		<td style="border: 1px solid black">((Old_index <= New_bhCount && New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey <= New_Ret_Key && Old_index >= 0 && New_bhMinimumValue >= 0))
+		<td style="border: 1px solid black">PUT_SetContract</td>
+		<td style="border: 1px solid black">((New_arrListContainsX && New_arrListIndexOfX <= Old_index && New_arrListCount == Old_arrListCount && Old_index <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_GetContract</td>
+		<td style="border: 1px solid black">((Old_index < Old_arrListCount && New_containsNewRet && New_arrListCount == Old_arrListCount && Old_index >= 0))
+		</td>
+	</tr>
+	<tr>
+		<td style="border: 1px solid black">PUT_ContainsContract</td>
+		<td style="border: 1px solid black">(Old_arrListIndexOfX == New_arrListIndexOfX && New_arrListCount == Old_arrListCount)</td>
+		<td style="border: 1px solid black">((New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_Ret && New_arrListIndexOfX >= 0) || ((!(-1 == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListIndexOfX && (!(New_Ret)) && Old_arrListCount >= -1 && New_arrListIndexOfX <= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListLastIndexOfX == -1))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_IndexOfContract</td>
-		<td style="border: 1px solid black">((Old_bhCount == New_bhCount && (!(New_Ret == Old_bhCount)) && New_Ret <= Old_bhCount && New_Ret >= -1))
+		<td style="border: 1px solid black">(New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(New_arrListContainsX))</td>
+		<td style="border: 1px solid black">(!(Old_arrListContainsX)) && Old_arrListCount >= -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1 && New_Ret == -1) || (New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret <= New_arrListLastIndexOfX && Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0))
 		</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid black">PUT_UpdateContract</td>
-		<td style="border: 1px solid black">((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
+		<td style="border: 1px solid black">PUT_LastIndexOfContract</td>
+		<td style="border: 1px solid black">(New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(Old_arrListContainsX))</td>
+		<td style="border: 1px solid black">(!(New_arrListContainsX)) && Old_arrListCount >= -1 && New_Ret == -1 && Old_arrListIndexOfX == -1 && New_arrListIndexOfX == -1) || (New_Ret < Old_arrListCount && Old_arrListIndexOfX == New_arrListIndexOfX && Old_arrListIndexOfX <= New_Ret && New_arrListContainsX && Old_arrListContainsX && New_arrListIndexOfX >= 0))
 		</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid black">PUT_MinimumUpdateContract</td>
-		<td style="border: 1px solid black">((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && (!(New_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && New_bhIndexOfValue >= 0))
-		</td>
+		<td style="border: 1px solid black">PUT_CountContract</td>
+		<td></td>
+		<td style="border: 1px solid black">(((New_Ret >= 1) || (New_Ret == 0)))</td>
 	</tr>
 </table>
 	  
@@ -282,23 +315,25 @@ black">((Old_bhMinimumKey == New_Ret_Key && New_Ret_Value == Old_bhMinimumValue 
 	  
 <table style="border: 1px solid black">
 	<tr>
+		<th></th>
+		<th colspan="2" style="border: 1px solid black">Contract</th>
+	</tr>
+	<tr>
 		<th style="border: 1px solid black">Method</th>
-		<th colspan="2" 
-style="border: 1px solid black">Contract</th>
+		<th style="border: 1px solid black">Conjunc</th>
+		<th style="border: 1px solid black">Disjunc</th>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_AddVertexContract</td>
 		<td style="border: 1px solid black">(!(New_Ret)) && Old_ugContainsVertexX && New_ugVertexCount == Old_ugVertexCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && Old_ugAdjacentDegree >= 0 && Old_ugAdjacentDegree <= 1 && Old_ugVertexCount >= 1))
 		</td>
-		<td style="border: 1px solid black">(New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty)) && New_ugContainsVertexX) && (((!(Old_ugContainsVertexX)) 
-&& (!(Old_ugEdgeCount == New_ugVertexCount)) && New_ugIsAdjacentEdgesEmpty && New_Ret && New_ugVertexCount == 1 + Old_ugVertexCount && Old_ugEdgeCount >= 0 && Old_ugEdgeCount <= 1 && New_ugAdjacentDegree == 0 && 
-Old_ugVertexCount <= 1 && New_ugVertexCount >= 1) || (Old_ugAdjacentDegree <= Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty))
+		<td style="border: 1px solid black">(New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty)) && New_ugContainsVertexX) && (((!(Old_ugContainsVertexX)) && (!(Old_ugEdgeCount == New_ugVertexCount)) && New_ugIsAdjacentEdgesEmpty && New_Ret && New_ugVertexCount == 1 + 
+Old_ugVertexCount && Old_ugEdgeCount >= 0 && Old_ugEdgeCount <= 1 && New_ugAdjacentDegree == 0 && Old_ugVertexCount <= 1 && New_ugVertexCount >= 1) || (Old_ugAdjacentDegree <= Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_RemoveVertexContract</td>
-		<td style="border: 1px solid black">((!(New_ugContainsVertexX)) && (!(Old_ugIsVerticesEmpty)) && New_ugVertexCount == -1 + Old_ugVertexCount && New_Ret && Old_ugContainsVertexX && New_ugVertexCount >= 0 && New_ugEdgeCount 
->= 0 && Old_ugAdjacentDegree >= 0)</td>
+		<td style="border: 1px solid black">((!(New_ugContainsVertexX)) && (!(Old_ugIsVerticesEmpty)) && New_ugVertexCount == -1 + Old_ugVertexCount && New_Ret && Old_ugContainsVertexX && New_ugVertexCount >= 0 && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0)</td>
 		<td style="border: 1px solid black">((Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugEdgeCount ==       Old_ugEdgeCount + -1*Old_ugAdjacentDegree && (!(New_ugIsAdjacentEdgesEmpty))) || (New_ugEdgeCount == -1*Old_ugAdjacentDegree && Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugEdgeCount == 0))
 		</td>
 	</tr>
@@ -312,12 +347,14 @@ Old_ugVertexCount <= 1 && New_ugVertexCount >= 1) || (Old_ugAdjacentDegree <= Ol
 		<td style="border: 1px solid black">PUT_ContainsEdgeContract</td>
 		<td style="border: 1px solid black">(!(1 == Old_target)) && Old_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget >= 0))
 		</td>
-		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugVertexCount >= 1) && (((!(New_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmptySource && (!(New_Ret)) && Old_ugIsAdjacentEdgesEmptySource && (!(Old_ContainsEdgeSrcTar)) && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugAdjacentDegreeSource == 0 && New_ugAdjacentDegreeSource == 0) || (Old_ugAdjacentDegreeSource <= Old_ugVertexCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegreeSource ==       Old_ugAdjacentDegreeSource && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && (!(Old_target == Old_ugVertexCount)) && New_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeTarget && (!(-1 == Old_source)) && (!(Old_source == Old_ugVertexCount)) && (!(1 == Old_source)) && (!(Old_target == Old_ugEdgeCount)) && (!(0 == Old_ugEdgeCount)) && (!(Old_source == Old_ugEdgeCount)) && (!(-1 == Old_target))
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugVertexCount >= 1) && (((!(New_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmptySource && (!(New_Ret)) && Old_ugIsAdjacentEdgesEmptySource && (!(Old_ContainsEdgeSrcTar)) && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugAdjacentDegreeSource == 0 && New_ugAdjacentDegreeSource == 0) || (Old_ugAdjacentDegreeSource <= Old_ugVertexCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegreeSource ==       Old_ugAdjacentDegreeSource && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) 
+&& (!(Old_target == Old_ugVertexCount)) && New_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeTarget && (!(-1 == Old_source)) && (!(Old_source == Old_ugVertexCount)) && (!(1 == Old_source)) && (!(Old_target == Old_ugEdgeCount)) && (!(0 == Old_ugEdgeCount)) && (!(Old_source == Old_ugEdgeCount)) && (!(-1 == Old_target))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_AdjacentEdgeContract</td>
-		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_index == 0) && ((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(New_Ret_Source == Old_ugVertexCount)) && (!(New_Ret_Source == Old_ugAdjacentDegree))
+		<td style="border: 1px solid 
+black">(New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_index == 0) && ((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(New_Ret_Source == Old_ugVertexCount)) && (!(New_Ret_Source == Old_ugAdjacentDegree))
 		</td>
 		<td style="border: 1px solid black">(!(1 == New_Ret_Source)) && New_Ret_Target == 0 && Old_x == 0 && New_Ret_Source >= 0 && Old_ugAdjacentDegree >= 2) || (New_Ret_Target == Old_x && Old_ugEdgeCount <= Old_ugVertexCount && Old_ugEdgeCount >= 1 && New_ugAdjacentDegree == 1 && Old_ugAdjacentDegree == 1))
 		</td>
@@ -339,40 +376,47 @@ Old_ugVertexCount <= 1 && New_ugVertexCount >= 1) || (Old_ugAdjacentDegree <= Ol
 		<td style="border: 1px solid black">(!(Old_ugIsVerticesEmpty)) && New_Ret >= 1 && Old_ugEdgeCount >= 0) || (New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_ugEdgeCount == 0 && New_Ret == 0 && Old_ugEdgeCount == 0))</td>
 	</tr>
 	<tr>
-		<td style="border: 1px solid black">PUT_ContainsVertexContract</td>
+		<td style="border: 
+1px solid black">PUT_ContainsVertexContract</td>
 		<td style="border: 1px solid black">((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty))</td>
-		<td style="border: 1px solid black">(!(Old_ugIsVerticesEmpty)) && Old_ugEdgeCount >= 0 && Old_ugVertexCount >= 1) || (New_ugIsVerticesEmpty && (!(New_Ret)) && Old_ugIsEdgesEmpty && Old_ugIsVerticesEmpty && New_ugIsEdgesEmpty && New_ugVertexCount == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugVertexCount == 0))</td>
+		<td style="border: 
+1px solid black">(!(Old_ugIsVerticesEmpty)) && Old_ugEdgeCount >= 0 && Old_ugVertexCount >= 1) || (New_ugIsVerticesEmpty && (!(New_Ret)) && Old_ugIsEdgesEmpty && Old_ugIsVerticesEmpty && New_ugIsEdgesEmpty && New_ugVertexCount == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugVertexCount == 0))</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_AddEdgeContract</td>
 		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && (!(New_ugIsAdjacentEdgesEmptySource)) && (!(New_ugIsAdjacentEdgesEmptyTarget)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar)</td>
-		<td style="border: 1px solid black">((New_ugAdjacentDegreeSource <= Old_ugVertexCount && New_ugAdjacentDegreeTarget <= Old_ugVertexCount && Old_ugEdgeCount <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <= New_ugEdgeCount && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <=       New_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget <=       New_ugAdjacentDegreeTarget && (!(Old_ugIsEdgesEmpty)) && Old_ugAdjacentDegreeSource >= 0 && New_ugAdjacentDegreeSource >= 1 && Old_ugAdjacentDegreeTarget >= 0 && New_ugAdjacentDegreeTarget >= 1 && Old_ugEdgeCount >= 1) || (New_Ret && Old_ugIsEdgesEmpty && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsAdjacentEdgesEmptyTarget && Old_ugIsAdjacentEdgesEmptySource && Old_target <= Old_source && Old_ugVertexCount >= 1 && Old_ugAdjacentDegreeSource == 0 && Old_ugAdjacentDegreeTarget == 0 && New_ugAdjacentDegreeSource == 1 && New_ugAdjacentDegreeTarget == 1 && Old_ugEdgeCount == 0 && New_ugEdgeCount == 1))
+		<td style="border: 1px solid black">((New_ugAdjacentDegreeSource <= Old_ugVertexCount && New_ugAdjacentDegreeTarget <= Old_ugVertexCount && Old_ugEdgeCount <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugAdjacentDegreeSource 
+<= New_ugEdgeCount && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <=       New_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget <=       New_ugAdjacentDegreeTarget && (!(Old_ugIsEdgesEmpty)) && Old_ugAdjacentDegreeSource >= 0 && New_ugAdjacentDegreeSource >= 1 && Old_ugAdjacentDegreeTarget >= 0 && New_ugAdjacentDegreeTarget >= 1 && Old_ugEdgeCount >= 1) || (New_Ret && Old_ugIsEdgesEmpty && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsAdjacentEdgesEmptyTarget && Old_ugIsAdjacentEdgesEmptySource && Old_target <= Old_source && Old_ugVertexCount >= 1 && Old_ugAdjacentDegreeSource == 0 && Old_ugAdjacentDegreeTarget 
+== 0 && New_ugAdjacentDegreeSource == 1 && New_ugAdjacentDegreeTarget == 1 && Old_ugEdgeCount == 0 && New_ugEdgeCount == 1))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_RemoveEdgeContract</td>
-		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget) && ((Old_ugAdjacentDegreeTarget <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <=       
-Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeSource <=       Old_ugAdjacentDegreeTarget && New_ugAdjacentDegreeSource <=       New_ugAdjacentDegreeTarget && New_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeTarget && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty))
+		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget) && ((Old_ugAdjacentDegreeTarget <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <=       Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeSource <= 
+      Old_ugAdjacentDegreeTarget && New_ugAdjacentDegreeSource <=       New_ugAdjacentDegreeTarget && New_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeTarget && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty))
 		</td>
-		<td style="border: 1px solid black">(!(Old_ugEdgeCount <= Old_ugAdjacentDegreeSource)) && Old_ugAdjacentDegreeTarget <= New_ugEdgeCount && (!(New_ugEdgeCount <= New_ugAdjacentDegreeSource)) && New_ugAdjacentDegreeSource >= 0 && Old_ugVertexCount >= 2) || ((!(New_ContainsEdgeSrcTar)) && Old_ugEdgeCount == Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget == Old_ugEdgeCount && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmptySource && New_ugIsAdjacentEdgesEmptyTarget && New_ugAdjacentDegreeSource == 0 && Old_ugEdgeCount >= 0 && Old_ugEdgeCount <= 1 && Old_ugVertexCount >= 1 && New_ugAdjacentDegreeTarget == 0 && New_ugEdgeCount == 0))
+		<td style="border: 1px solid black">(!(Old_ugEdgeCount <= Old_ugAdjacentDegreeSource)) && Old_ugAdjacentDegreeTarget <= New_ugEdgeCount && (!(New_ugEdgeCount <= New_ugAdjacentDegreeSource)) && New_ugAdjacentDegreeSource >= 0 && Old_ugVertexCount >= 2) || ((!(New_ContainsEdgeSrcTar)) && Old_ugEdgeCount == Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget == Old_ugEdgeCount && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmptySource && New_ugIsAdjacentEdgesEmptyTarget && New_ugAdjacentDegreeSource == 0 && Old_ugEdgeCount >= 
+0 && Old_ugEdgeCount <= 1 && Old_ugVertexCount >= 1 && New_ugAdjacentDegreeTarget == 0 && New_ugEdgeCount == 0))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_IsEdgesEmptyContract</td>
 		<td style="border: 1px solid black">(!(Old_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1 && Old_ugEdgeCount >= 0))</td>
-		<td style="border: 1px solid black">((New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && New_Ret && Old_ugVertexCount == 0 && New_ugEdgeCount == 0 
-&& New_ugVertexCount == 0 && Old_ugEdgeCount == 0) || (New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty))</td>
+		<td style="border: 1px solid black">((New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && New_Ret && Old_ugVertexCount == 0 
+&& New_ugEdgeCount == 0 && New_ugVertexCount == 0 && Old_ugEdgeCount == 0) || (New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty))</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_EdgeCountContract</td>
-		<td style="border: 1px solid black">(!(Old_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1 && New_Ret >= 1))</td>
+		<td style="border: 1px solid black">(!(Old_ugIsVerticesEmpty)) 
+&& Old_ugVertexCount >= 1 && New_Ret >= 1))</td>
 		<td style="border: 1px solid black">(New_ugVertexCount == Old_ugVertexCount) && ((New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && Old_ugVertexCount >= 0 && New_Ret == 0) || ((!(New_ugIsEdgesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty))</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_AdjacentDegreeContract</td>
 		<td style="border: 1px solid black">(New_Ret <= Old_ugVertexCount && New_Ret <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugVertexCount >= 1 && New_Ret >= 0)
 		</td>
-		<td style="border: 1px solid black">(((!(Old_x == Old_ugEdgeCount))) || (New_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && Old_ugIsEdgesEmpty && Old_x == 0))</td>
+		<td style="border: 1px solid black">(((!(Old_x == Old_ugEdgeCount))) || (New_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty 
+&& Old_ugIsEdgesEmpty && Old_x == 0))</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_IsAdjacentEdgesEmptyContract</td>
