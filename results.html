@@ -193,49 +193,50 @@ solid black">PUT_PeekContract</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_AddContract</td>
-		<td style="border: 1px solid black">((Old_arrListCount == New_arrListLastIndexOfX && New_arrListContainsX && New_Ret == New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
+		<td style="border: 1px solid black">((OldCount == NewLastIndexOfX && NewContainsX && New_Ret == NewLastIndexOfX && NewCount == 1 + OldCount && OldIndexOfX <= NewIndexOfX && OldIndexOfX <= OldLastIndexOfX && NewIndexOfX <= NewLastIndexOfX && (!(NewLastIndexOfX ==           OldLastIndexOfX)) && OldLastIndexOfX <= NewLastIndexOfX && NewIndexOfX >= 0 && OldIndexOfX >= -1))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_RemoveContract</td>
-		<td style="border: 1px solid black">(New_arrListCount 
-<= Old_arrListCount && (!(New_arrListLastIndexOfX == New_arrListCount))
+		<td style="border: 1px solid black">(NewCount <= OldCount && (!(NewLastIndexOfX == NewCount))
 		</td>
-		<td style="border: 1px solid black">(!(Old_arrListLastIndexOfX == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= -1)
+		<td style="border: 1px solid black">(!(OldLastIndexOfX == OldCount)) && OldLastIndexOfX <= NewCount 
+&& OldIndexOfX <= OldLastIndexOfX && NewIndexOfX <= NewLastIndexOfX && NewLastIndexOfX <= OldLastIndexOfX && OldIndexOfX >= -1 && NewIndexOfX >= -1)
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_InsertContract</td>
-		<td style="border: 1px solid black">((New_arrListContainsX && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListCount 
-== 1 + Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
+		<td style="border: 1px solid black">((NewContainsX && NewIndexOfX <= Old_index && Old_index <= NewLastIndexOfX && NewCount == 1 + OldCount && NewLastIndexOfX <= OldCount && OldIndexOfX <= OldLastIndexOfX && (!(NewLastIndexOfX ==           OldLastIndexOfX)) && OldLastIndexOfX <= NewLastIndexOfX && NewIndexOfX >= 0 && OldIndexOfX >= -1))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_SetContract</td>
-		<td style="border: 1px solid black">((New_arrListContainsX && New_arrListIndexOfX <= Old_index && New_arrListCount == Old_arrListCount && Old_index <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
+		<td style="border: 1px solid black">((NewContainsX && NewIndexOfX <= Old_index && NewCount == OldCount && Old_index <= NewLastIndexOfX && (!(NewLastIndexOfX == OldCount)) && NewLastIndexOfX <= OldCount && OldIndexOfX <= OldLastIndexOfX 
+&& OldLastIndexOfX <= NewLastIndexOfX && NewIndexOfX >= 0 && OldIndexOfX >= -1))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_GetContract</td>
-		<td style="border: 1px solid black">((Old_index < Old_arrListCount && New_containsNewRet && New_arrListCount == Old_arrListCount && Old_index >= 0))
+		<td style="border: 1px solid black">((Old_index < OldCount && New_containsNewRet && NewCount == OldCount && Old_index >= 0))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_ContainsContract</td>
-		<td style="border: 1px solid black">(Old_arrListIndexOfX == New_arrListIndexOfX && New_arrListCount == Old_arrListCount)</td>
-		<td style="border: 1px solid black">((New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_Ret && New_arrListIndexOfX >= 0) || ((!(-1 == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListIndexOfX && (!(New_Ret)) && Old_arrListCount >= -1 && New_arrListIndexOfX <= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListLastIndexOfX == -1))
+		<td style="border: 1px solid black">(OldIndexOfX == NewIndexOfX && NewCount == OldCount)</td>
+		<td style="border: 1px solid black">((NewLastIndexOfX < OldCount && NewLastIndexOfX == OldLastIndexOfX && NewIndexOfX <= NewLastIndexOfX && New_Ret && NewIndexOfX >= 0) || ((!(-1 == OldCount)) && OldLastIndexOfX <= NewIndexOfX && (!(New_Ret)) && OldCount >= -1 && NewIndexOfX <= -1 && OldLastIndexOfX >= -1 && NewLastIndexOfX == -1))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_IndexOfContract</td>
-		<td style="border: 1px solid black">(New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(New_arrListContainsX))</td>
-		<td style="border: 1px solid black">(!(Old_arrListContainsX)) && Old_arrListCount >= -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1 && New_Ret == -1) || (New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret <= New_arrListLastIndexOfX && Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0))
+		<td style="border: 1px solid black">(NewCount == OldCount) && (((!(-1 == OldCount)) && (!(NewContainsX))</td>
+		<td style="border: 1px solid black">(!(OldContainsX)) && OldCount >= -1 && OldLastIndexOfX == -1 && NewLastIndexOfX == -1 
+&& New_Ret == -1) || (NewLastIndexOfX < OldCount && NewLastIndexOfX == OldLastIndexOfX && New_Ret <= NewLastIndexOfX && OldContainsX && NewContainsX && New_Ret >= 0))
 		</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_LastIndexOfContract</td>
-		<td style="border: 1px solid black">(New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(Old_arrListContainsX))</td>
-		<td style="border: 1px solid black">(!(New_arrListContainsX)) && Old_arrListCount >= -1 && New_Ret == -1 && Old_arrListIndexOfX == -1 && New_arrListIndexOfX == -1) || (New_Ret < Old_arrListCount && Old_arrListIndexOfX == New_arrListIndexOfX && Old_arrListIndexOfX <= New_Ret && New_arrListContainsX && Old_arrListContainsX && New_arrListIndexOfX >= 0))
+		<td style="border: 1px solid black">(NewCount == OldCount) && (((!(-1 == OldCount)) && (!(OldContainsX))</td>
+		<td style="border: 1px solid black">(!(NewContainsX)) && OldCount >= -1 && New_Ret == -1 && OldIndexOfX == -1 && NewIndexOfX == -1) || (New_Ret < OldCount && OldIndexOfX == NewIndexOfX && OldIndexOfX <= New_Ret && NewContainsX && OldContainsX && NewIndexOfX >= 0))
 		</td>
 	</tr>
 	<tr>
