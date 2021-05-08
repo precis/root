@@ -198,10 +198,7 @@ solid black">PUT_PeekContract</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_RemoveContract</td>
-		<td style="border: 1px solid black">(NewCount <= OldCount && (!(NewLastIndexOfX == NewCount))
-		</td>
-		<td style="border: 1px solid black">(!(OldLastIndexOfX == OldCount)) && OldLastIndexOfX <= NewCount 
-&& OldIndexOfX <= OldLastIndexOfX && NewIndexOfX <= NewLastIndexOfX && NewLastIndexOfX <= OldLastIndexOfX && OldIndexOfX >= -1 && NewIndexOfX >= -1)
+		<td style="border: 1px solid black">((NewCount <= OldCount && (!(NewLastIndexOfX == NewCount)) && (!(OldLastIndexOfX == OldCount)) && OldLastIndexOfX <= NewCount && OldIndexOfX <= OldLastIndexOfX && NewIndexOfX <= NewLastIndexOfX && NewLastIndexOfX <= OldLastIndexOfX && OldIndexOfX >= -1 && NewIndexOfX >= -1))
 		</td>
 	</tr>
 	<tr>
@@ -211,8 +208,7 @@ solid black">PUT_PeekContract</td>
 	</tr>
 	<tr>
 		<td style="border: 1px solid black">PUT_SetContract</td>
-		<td style="border: 1px solid black">((NewContainsX && NewIndexOfX <= Old_index && NewCount == OldCount && Old_index <= NewLastIndexOfX && (!(NewLastIndexOfX == OldCount)) && NewLastIndexOfX <= OldCount && OldIndexOfX <= OldLastIndexOfX 
-&& OldLastIndexOfX <= NewLastIndexOfX && NewIndexOfX >= 0 && OldIndexOfX >= -1))
+		<td style="border: 1px solid black">((NewContainsX && NewIndexOfX <= Old_index && NewCount == OldCount && Old_index <= NewLastIndexOfX && (!(NewLastIndexOfX == OldCount)) && NewLastIndexOfX <= OldCount && OldIndexOfX <= OldLastIndexOfX && OldLastIndexOfX <= NewLastIndexOfX && NewIndexOfX >= 0 && OldIndexOfX >= -1))
 		</td>
 	</tr>
 	<tr>
@@ -229,8 +225,7 @@ solid black">PUT_PeekContract</td>
 	<tr>
 		<td style="border: 1px solid black">PUT_IndexOfContract</td>
 		<td style="border: 1px solid black">(NewCount == OldCount) && (((!(-1 == OldCount)) && (!(NewContainsX))</td>
-		<td style="border: 1px solid black">(!(OldContainsX)) && OldCount >= -1 && OldLastIndexOfX == -1 && NewLastIndexOfX == -1 
-&& New_Ret == -1) || (NewLastIndexOfX < OldCount && NewLastIndexOfX == OldLastIndexOfX && New_Ret <= NewLastIndexOfX && OldContainsX && NewContainsX && New_Ret >= 0))
+		<td style="border: 1px solid black">(!(OldContainsX)) && OldCount >= -1 && OldLastIndexOfX == -1 && NewLastIndexOfX == -1 && New_Ret == -1) || (NewLastIndexOfX < OldCount && NewLastIndexOfX == OldLastIndexOfX && New_Ret <= NewLastIndexOfX && OldContainsX && NewContainsX && New_Ret >= 0))
 		</td>
 	</tr>
 	<tr>
